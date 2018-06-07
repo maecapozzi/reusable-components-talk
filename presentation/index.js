@@ -11,7 +11,9 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Image,
+  Link
 } from "spectacle";
 
 // Import theme
@@ -56,11 +58,11 @@ export default class Presentation extends React.Component {
               I'm a software engineer at InRhythm (we're hiring)
             </ListItem>
             <ListItem margin="20px 0 0 0">
-              I'm consulting at American Express
+              I'm consulting at a Fortune 500 company
             </ListItem>
             <ListItem margin="20px 0 0 0">
-              I'm trying to build a reusable components library at American
-              Express
+              I'm trying to build a reusable components library at that
+              company
             </ListItem>
           </List>
         </Slide>
@@ -70,7 +72,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <List margin="50px 0 0 100px">
             <ListItem margin="20px 0 0 0">
-              Someone told me that we were building a reusable components
+              Someone told me that we had to build a reusable components
               library
             </ListItem>
           </List>
@@ -137,9 +139,7 @@ export default class Presentation extends React.Component {
             Speed Up
           </Heading>
           <Text>
-            Move faster by making all of our decisions upfront, rather than
-            having to remake those decisions every time we want to build a
-            button.
+            Move faster by making team decisions upfront. Don't remake those decisions every time someone builds a toggle.
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -147,7 +147,8 @@ export default class Presentation extends React.Component {
             Enforce Consistency
           </Heading>
           <Text>
-            If every dev builds every component from scratch, our code product won’t have a consistent feel.
+            If every dev builds every component from scratch, your
+            product won’t have a consistent feel.
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -155,11 +156,9 @@ export default class Presentation extends React.Component {
             Boost Performance
           </Heading>
           <Text>
-            When we reuse a component multiple times, we don’t need to
-            download a new component, and it doesn’t require much extra
-            memory. If we build new components from scratch every time,
-            we’ll probably duplicate JavaScript and bloat our bundle. Or
-            worse, devs will import a competing library.
+            If you build new components from scratch every time, you'll
+            duplicate JavaScript and bloat your bundle. Or
+            devs will import a competing library.
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -168,7 +167,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <Text>
             Reusable components should reduce the overall size and
-            complexity of our organization’s codebase.
+            complexity of the codebase, lowering the surface area we have to maintain.
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -176,8 +175,8 @@ export default class Presentation extends React.Component {
             Update Your Code Later
           </Heading>
           <Text>
-            When we want to use a new JavaScript framework in 5 years, we can
-            replace our existing code component-by-component.
+            When a new JavaScript framework comes out, you
+            can replace your existing code component-by-component.
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -208,6 +207,51 @@ export default class Presentation extends React.Component {
               Do you understand the different types of components?
             </ListItem>
           </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="tertiary" caps>
+            <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
+              <Image height="700px" src="https://image.ibb.co/j1qXTT/reusable_Toggle.png" />
+            </Link>
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={3} textColor="primary" caps>
+            But that's the easy part!
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={4} textColor="tertiary">
+            The hard part is incentivizing developers to actually want to build and use these components.
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <List margin="50px 0 0 100px">
+            <ListItem margin="20px 0 0 0">
+              Do the developers know how to write documentation?
+            </ListItem>
+            <ListItem margin="20px 0 0 0">
+              Do they want to write documentation?
+            </ListItem>
+            <ListItem margin="20px 0 0 0">
+              Should the components have styles? Which styles? How should
+              they implemented? How easy should they be to override?
+            </ListItem>
+            <ListItem margin="20px 0 0 0">
+              How do you convince other teams/people to reuse your
+              components?
+            </ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="tertiary">
+            The point...
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Text size={3} textColor="tertiary">
+            A reusable components library can be valuable. But don't build it unless you're sure it's the right decision and you're ready to sink a bunch of money and time into it.
+          </Text>
         </Slide>
       </Deck>;
   }
