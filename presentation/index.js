@@ -37,10 +37,23 @@ const theme = createTheme(
 
 export default class Presentation extends React.Component {
   render() {
-    return <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+    return (
+      <Deck
+        transition={["zoom", "slide"]}
+        transitionDuration={500}
+        theme={theme}
+      >
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Reusable Components Library
+          <Heading
+            size={1}
+            fit
+            caps
+            lineHeight={1}
+            textColor="secondary"
+            fit
+            bold
+          >
+            Building a Reusable Component Library
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
             Tradoffs, Techniques, and Challenges
@@ -61,19 +74,17 @@ export default class Presentation extends React.Component {
               I'm consulting at a Fortune 500 company
             </ListItem>
             <ListItem margin="20px 0 0 0">
-              I'm trying to build a reusable components library at that
-              company
+              I'm trying to build a reusable component library at that company
             </ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={4} textColor="secondary" caps>
-            How did I end up building this reusable components library?
+            How did I end up building this reusable component library?
           </Heading>
           <List margin="50px 0 0 100px">
             <ListItem margin="20px 0 0 0">
-              Someone told me that we had to build a reusable components
-              library
+              Someone told me that we had to build a reusable component library
             </ListItem>
           </List>
         </Slide>
@@ -91,7 +102,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={4} textColor="secondary" caps>
-            Now, we're building a reusable components library
+            Now, we're building a reusable component library
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -100,84 +111,84 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Why you should not build a component library
+          <Heading size={4} textColor="secondary">
+            Reasons not to build a component library
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
+          <Heading size={4} textColor="tertiary">
+            Your team has a low tolerance for risk
           </Heading>
           <List margin="50px 0 0 100px">
             <ListItem margin="20px 0 0 0">
-              It's risky! Building a component library requires a lot of
-              upfront effort, with a potentially low payoff
+              Building a component library requires a lot of upfront effort,
+              with a potentially low payoff
             </ListItem>
             <ListItem margin="20px 0 0 0">
-              It's technically challenging if your team isn't familiar with
-              building tools for other engineers
+              Avoid if you have a low appetite for risk, haven't shipped an MVP
+              yet, or have tight deadlines imposed on you by external
+              stakeholders.
             </ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Why you should not build a component library
+        <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
+          <Heading size={4} textColor="tertiary">
+            Your team is new to reusability
           </Heading>
-          <List margin="50px 0 0 100px">
-            <ListItem margin="20px 0 0 0">
-              You have to maintain the library, especially if other teams
-              start using it.
-            </ListItem>
-            <ListItem margin="20px 0 0 0">
-              It doesn't directly produce revenue, so it's a hard sell to
-              product and business folks
-            </ListItem>
-          </List>
+          <Text>
+            If no one on your team has built an npm module or worked on an open
+            source project, you might want to start smaller than an entire
+            library
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
+          <Heading size={4} textColor="tertiary">
+            Your team doesn't have the bandwidth to maintain it
+          </Heading>
+          <Text>Be honest about this one.</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
+          <Heading size={4} textColor="tertiary">
+            You can't sell it to product and business folks
+          </Heading>
+          <Text>
+            A library on its own doesn't directly impact the bottom line.
+          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            But there are lots of reasons why you should!
+          <Heading size={2} textColor="primary">
+            Still with me? Let's talk pros!
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
             Speed Up
           </Heading>
-          <Text>
-            Move faster by making team decisions upfront. Don't remake those decisions every time someone builds a toggle.
-          </Text>
+          <Text>Less bikeshedding. More coding.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
             Enforce Consistency
           </Heading>
-          <Text>
-            If every dev builds every component from scratch, your
-            product won’t have a consistent feel.
-          </Text>
+          <Text>Create a consistent experience.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
             Boost Performance
           </Heading>
-          <Text>
-            If you build new components from scratch every time, you'll
-            duplicate JavaScript and bloat your bundle. Or
-            devs will import a competing library.
-          </Text>
+          <Text>Reduce the size of your JavaScript bundle.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
             Reduce Maintenance
           </Heading>
-          <Text>
-            Reusable components should reduce the overall size and
-            complexity of the codebase, lowering the surface area we have to maintain.
-          </Text>
+          <Text>Reduce the size and complexity of your codebase.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
             Update Your Code Later
           </Heading>
-          <Text>
-            When a new JavaScript framework comes out, you
-            can replace your existing code component-by-component.
-          </Text>
+          <Text>Replace your existing code component-by-component.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={3} textColor="primary" caps>
@@ -189,31 +200,74 @@ export default class Presentation extends React.Component {
             Reusability is a spectrum
           </Heading>
         </Slide>
+        <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+          <Image src="https://image.ibb.co/iGyj2y/charts_3_up_bold.png" />
+        </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            There are lot of things to consider when building reusable components
+          <Heading size={4} textColor="tertiary" caps>
+            Reusability Considerations
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} textColor="tertiary">
+            What are the use cases?
           </Heading>
           <List margin="50px 0 0 100px">
             <ListItem margin="20px 0 0 0">
-              How might your users use this component?
+              How might others try to use the component?
             </ListItem>
             <ListItem margin="20px 0 0 0">
               What happens if they use your component in an unexpected way?
             </ListItem>
-            <ListItem margin="20px 0 0 0">
-              How do you expose your mini-API?
-            </ListItem>
-            <ListItem margin="20px 0 0 0">
-              Do you understand the different types of components?
-            </ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="tertiary" caps>
-            <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
-              <Image height="700px" src="https://image.ibb.co/j1qXTT/reusable_Toggle.png" />
-            </Link>
+        <Slide>
+          <Heading size={4} textColor="tertiary">
+            API exposure
           </Heading>
+          <Text textAlign="left" margin="50px 0 0 120px">
+            How do you expose your component's API to its children?
+          </Text>
+          <Text textAlign="left" margin="50px 0 0 120px">
+            What patterns are available?
+          </Text>
+        </Slide>
+        <Slide>
+          <Heading size={4} textColor="tertiary">
+            Higher Order Component
+          </Heading>
+          <Image
+            height="700px"
+            src="https://image.ibb.co/h3WF9d/carbon_1.png"
+          />
+        </Slide>
+        <Slide>
+          <Heading size={4} textColor="tertiary">
+            Higher Order Component
+          </Heading>
+          <Image src="https://image.ibb.co/jQ4rhy/carbon_2.png" />
+        </Slide>
+        <Slide>
+          <Heading size={4} textColor="tertiary">
+            Render Prop
+          </Heading>
+          <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
+            <Image
+              height="600px"
+              width="600px"
+              src="https://image.ibb.co/fPYtSo/carbon.png"
+            />
+          </Link>
+        </Slide>
+        <Slide>
+          <Heading size={4} textColor="tertiary">
+            Render Prop
+          </Heading>
+          <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
+            <Image
+              src="https://image.ibb.co/iMDsNy/carbon_3.png"
+            />
+          </Link>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={3} textColor="primary" caps>
@@ -222,10 +276,13 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={4} textColor="tertiary">
-            The hard part is incentivizing developers to actually want to build and use these components.
+            The hard part is creating a culture that facilitates discussion and growth
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={3} textColor="tertiary" caps>
+            Documentation
+          </Heading>
           <List margin="50px 0 0 100px">
             <ListItem margin="20px 0 0 0">
               Do the developers know how to write documentation?
@@ -233,26 +290,71 @@ export default class Presentation extends React.Component {
             <ListItem margin="20px 0 0 0">
               Do they want to write documentation?
             </ListItem>
-            <ListItem margin="20px 0 0 0">
-              Should the components have styles? Which styles? How should
-              they implemented? How easy should they be to override?
-            </ListItem>
-            <ListItem margin="20px 0 0 0">
-              How do you convince other teams/people to reuse your
-              components?
-            </ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="tertiary">
-            The point...
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={3} textColor="tertiary" caps>
+            Decision-making
           </Heading>
+          <Text>
+            Who traditionally makes decisions on your team? 
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={3} textColor="tertiary" caps>
+            Styling
+          </Heading>
+          <ListItem margin="20px 0 0 0">
+            Should the components have styles? 
+          </ListItem>
+          <ListItem margin="20px 0 0 0">
+            How should styles be implemented? How easy should they be to override?
+          </ListItem>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={3} textColor="tertiary" caps>
+            Linting
+          </Heading>
+          <ListItem margin="20px 0 0 0">
+            What linter should you use?
+          </ListItem>
+          <ListItem margin="20px 0 0 0">
+            Should you use Prettier?
+          </ListItem>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={3} textColor="tertiary" caps>
+            PR Process
+          </Heading>
+          <ListItem margin="20px 0 0 0">
+            Who can merge?
+          </ListItem>
+          <ListItem margin="20px 0 0 0">
+            What happens if the build fails?
+          </ListItem>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Text size={3} textColor="tertiary">
-            A reusable components library can be valuable. But don't build it unless you're sure it's the right decision and you're ready to sink a bunch of money and time into it.
+            A reusable component library can be valuable. But don't build it
+            unless you're sure it's the right decision and you're ready to sink
+            a bunch of money and time into it.
           </Text>
         </Slide>
-      </Deck>;
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="tertiary">
+            Contact Me
+          </Heading>
+          <Text margin="20px 0" textColor="secondary">
+            maecapozzi@gmail.com
+          </Text>
+          <Text margin="20px 0" textColor="secondary">
+            @MCapoz
+          </Text>
+          <Text margin="20px 0" textColor="secondary">
+            github.com/maecapozzi
+          </Text>
+        </Slide>
+      </Deck>
+    );
   }
 }
