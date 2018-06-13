@@ -37,22 +37,9 @@ const theme = createTheme(
 
 export default class Presentation extends React.Component {
   render() {
-    return (
-      <Deck
-        transition={["zoom", "slide"]}
-        transitionDuration={500}
-        theme={theme}
-      >
+    return <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading
-            size={1}
-            fit
-            caps
-            lineHeight={1}
-            textColor="secondary"
-            fit
-            bold
-          >
+          <Heading size={1} fit caps lineHeight={1} textColor="secondary" fit bold>
             Building a Reusable Component Library
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
@@ -74,7 +61,8 @@ export default class Presentation extends React.Component {
               I'm consulting at a Fortune 500 company
             </ListItem>
             <ListItem margin="20px 0 0 0">
-              I'm trying to build a reusable component library at that company
+              I'm trying to build a reusable component library at that
+              company
             </ListItem>
           </List>
         </Slide>
@@ -84,7 +72,8 @@ export default class Presentation extends React.Component {
           </Heading>
           <List margin="50px 0 0 100px">
             <ListItem margin="20px 0 0 0">
-              Someone told me that we had to build a reusable component library
+              Someone told me that we had to build a reusable component
+              library
             </ListItem>
           </List>
         </Slide>
@@ -125,8 +114,8 @@ export default class Presentation extends React.Component {
               with a potentially low payoff
             </ListItem>
             <ListItem margin="20px 0 0 0">
-              Avoid if you have a low appetite for risk, haven't shipped an MVP
-              yet, or have tight deadlines imposed on you by external
+              Avoid if you have a low appetite for risk, haven't shipped an
+              MVP yet, or have tight deadlines imposed on you by external
               stakeholders.
             </ListItem>
           </List>
@@ -136,9 +125,9 @@ export default class Presentation extends React.Component {
             Your team is new to reusability
           </Heading>
           <Text>
-            If no one on your team has built an npm module or worked on an open
-            source project, you might want to start smaller than an entire
-            library
+            If no one on your team has built an npm module or worked on an
+            open source project, you might want to start smaller than an
+            entire library
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
@@ -236,10 +225,7 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="tertiary">
             Higher Order Component
           </Heading>
-          <Image
-            height="700px"
-            src="https://image.ibb.co/h3WF9d/carbon_1.png"
-          />
+          <Image height="700px" src="https://image.ibb.co/h3WF9d/carbon_1.png" />
         </Slide>
         <Slide>
           <Heading size={4} textColor="tertiary">
@@ -252,11 +238,7 @@ export default class Presentation extends React.Component {
             Render Prop
           </Heading>
           <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
-            <Image
-              height="600px"
-              width="600px"
-              src="https://image.ibb.co/fPYtSo/carbon.png"
-            />
+            <Image height="600px" width="600px" src="https://image.ibb.co/fPYtSo/carbon.png" />
           </Link>
         </Slide>
         <Slide>
@@ -264,14 +246,12 @@ export default class Presentation extends React.Component {
             Render Prop
           </Heading>
           <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
-            <Image
-              src="https://image.ibb.co/iMDsNy/carbon_3.png"
-            />
+            <Image src="https://image.ibb.co/iMDsNy/carbon_3.png" />
           </Link>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={3} textColor="primary">
-            Now for the hard part! 
+            Now for the hard part!
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -296,19 +276,18 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="tertiary" caps>
             Decision-making
           </Heading>
-          <Text>
-            Who traditionally makes decisions on your team? 
-          </Text>
+          <Text>Who traditionally makes decisions on your team?</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={3} textColor="tertiary" caps>
             Styling
           </Heading>
           <ListItem margin="20px 0 0 0">
-            Should the components have styles? 
+            Should the components have styles?
           </ListItem>
           <ListItem margin="20px 0 0 0">
-            How should styles be implemented? How easy should they be to override?
+            How should styles be implemented? How easy should they be to
+            override?
           </ListItem>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
@@ -318,26 +297,28 @@ export default class Presentation extends React.Component {
           <ListItem margin="20px 0 0 0">
             What linter should you use?
           </ListItem>
-          <ListItem margin="20px 0 0 0">
-            Should you use Prettier?
-          </ListItem>
+          <ListItem margin="20px 0 0 0">Should you use Prettier?</ListItem>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={3} textColor="tertiary" caps>
             PR Process
           </Heading>
-          <ListItem margin="20px 0 0 0">
-            Who can merge?
-          </ListItem>
+          <ListItem margin="20px 0 0 0">Who can merge?</ListItem>
           <ListItem margin="20px 0 0 0">
             What happens if the build fails?
           </ListItem>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Text size={3} textColor="tertiary">
-            A reusable component library can be valuable. But don't build it
-            unless you're sure it's the right decision and you're ready to sink
-            a bunch of money and time into it.
+            A reusable component library can be valuable. But don't build it unless you're sure it's the right decision and you're ready to sink a bunch of money and time into it.
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Text margin="20px 0" textColor="secondary">
+            This slide was built with Spectacle from Formidable Labs
+          </Text>
+          <Text margin="20px 0" textColor="secondary">
+            Special thanks to Joe Cahill for design help and Elizabeth Ferrao for running through the talk with me!
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -354,7 +335,6 @@ export default class Presentation extends React.Component {
             github.com/maecapozzi
           </Text>
         </Slide>
-      </Deck>
-    );
+      </Deck>;
   }
 }
