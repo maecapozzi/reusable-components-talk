@@ -39,84 +39,78 @@ export default class Presentation extends React.Component {
   render() {
     return <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary" fit bold>
+          <Heading caps textColor="secondary">
             Building a Reusable Component Library
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+          <Text margin="10px 0 0" size={6} textColor="tertiary" fit bold>
             Tradoffs, Techniques, and Challenges
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
+          <Heading textSize={50} textColor="primary" caps>
             Who am I?
           </Heading>
-          <Heading size={4} textColor="secondary">
+          <Heading textSize={50} textColor="secondary">
             ...and what do I know?
           </Heading>
           <List margin="50px 0 0 100px">
-            <ListItem margin="20px 0 0 0">
+            <ListItem textSize={50} margin="20px 0 0 0">
               I'm a software engineer at InRhythm (we're hiring)
             </ListItem>
-            <ListItem margin="20px 0 0 0">
+            <ListItem textSize={50} margin="20px 0 0 0">
               I'm consulting at a Fortune 500 company
             </ListItem>
-            <ListItem margin="20px 0 0 0">
-              I'm trying to build a reusable component library at that
-              company
+            <ListItem textSize={50} margin="20px 0 0 0">
+              I'm trying to build a reusable component library at that company
             </ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={4} textColor="secondary" caps>
+          <Heading textSize={80} textColor="secondary">
             How did I end up building this reusable component library?
           </Heading>
-          <List margin="50px 0 0 100px">
-            <ListItem margin="20px 0 0 0">
-              Someone told me that we had to build a reusable component
-              library
-            </ListItem>
-          </List>
+          <Text textColor="tertiary">
+            Someone told me that we had to build a reusable component
+            library
+          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>No</Quote>
+            <Quote textSize={200}>No</Quote>
             <Cite>Mae Capozzi</Cite>
           </BlockQuote>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Yes</Quote>
+            <Quote textSize={200}>Yes</Quote>
             <Cite>Everyone Else</Cite>
           </BlockQuote>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={4} textColor="secondary" caps>
+          <Heading textSize={80} textColor="secondary" caps>
             Now, we're building a reusable component library
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={4} textColor="primary" caps>
+          <Heading textSize={80} textColor="primary">
             What are the tradeoffs?
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={4} textColor="secondary">
+          <Heading textSize={80} textColor="secondary">
             Reasons not to build a component library
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
-          <Heading size={4} textColor="tertiary">
+          <Heading textSize={70} textColor="tertiary">
             Your team has a low tolerance for risk
           </Heading>
           <List margin="50px 0 0 100px">
-            <ListItem margin="20px 0 0 0">
-              Building a component library requires a lot of upfront effort,
-              with a potentially low payoff
+            <ListItem textSize={50} margin="20px 0 0 0">
+              Upfront effort === high
             </ListItem>
-            <ListItem margin="20px 0 0 0">
-              Avoid if you have a low appetite for risk, haven't shipped an
-              MVP yet, or have tight deadlines imposed on you by external
-              stakeholders.
+            <ListItem textSize={50} margin="20px 0 0 0">
+              Payoff might be low
             </ListItem>
           </List>
         </Slide>
@@ -124,23 +118,19 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="tertiary">
             Your team is new to reusability
           </Heading>
-          <Text>
-            If no one on your team has built an npm module or worked on an
-            open source project, you might want to start smaller than an
-            entire library
-          </Text>
+          <Text textSize={50}>Start small</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
           <Heading size={4} textColor="tertiary">
             Your team doesn't have the bandwidth to maintain it
           </Heading>
-          <Text>Be honest about this one.</Text>
+          <Text textSize={50}>Be honest about this one.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
           <Heading size={4} textColor="tertiary">
             You can't sell it to product and business folks
           </Heading>
-          <Text>
+          <Text textSize={50}>
             A library on its own doesn't directly impact the bottom line.
           </Text>
         </Slide>
@@ -153,31 +143,37 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="tertiary" caps>
             Speed Up
           </Heading>
-          <Text>Less bikeshedding. More coding.</Text>
+          <Text textSize={70}>Less bikeshedding. More coding.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
             Enforce Consistency
           </Heading>
-          <Text>Create a consistent experience.</Text>
+          <Text textSize={70}>Create a consistent experience.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
             Boost Performance
           </Heading>
-          <Text>Reduce the size of your JavaScript bundle.</Text>
+          <Text textSize={70}>
+            Reduce the size of your JavaScript bundle.
+          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
             Reduce Maintenance
           </Heading>
-          <Text>Reduce the size and complexity of your codebase.</Text>
+          <Text textSize={70}>
+            Reduce the size and complexity of your codebase.
+          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
             Update Your Code Later
           </Heading>
-          <Text>Replace your existing code component-by-component.</Text>
+          <Text textSize={70}>
+            Replace your existing code component-by-component.
+          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={3} textColor="primary" caps>
@@ -190,7 +186,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
-          <Image src="https://image.ibb.co/iGyj2y/charts_3_up_bold.png" />
+          <Image height="400px" width="1000px" src="https://image.ibb.co/iGyj2y/charts_3_up_bold.png" />
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={4} textColor="tertiary" caps>
@@ -202,11 +198,11 @@ export default class Presentation extends React.Component {
             What are the use cases?
           </Heading>
           <List margin="50px 0 0 100px">
-            <ListItem margin="20px 0 0 0">
+            <ListItem textSize={50} margin="20px 0 0 0">
               How might others try to use the component?
             </ListItem>
-            <ListItem margin="20px 0 0 0">
-              What happens if they use your component in an unexpected way?
+            <ListItem textSize={50} margin="20px 0 0 0">
+              Unexpected use?
             </ListItem>
           </List>
         </Slide>
@@ -214,39 +210,37 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="tertiary">
             API exposure
           </Heading>
-          <Text textAlign="left" margin="50px 0 0 120px">
+          <Text textSize={50} textAlign="left" margin="50px 0 0 120px">
             How do you expose your component's API to its children?
           </Text>
-          <Text textAlign="left" margin="50px 0 0 120px">
+          <Text textSize={50} textAlign="left" margin="50px 0 0 120px">
             What patterns are available?
           </Text>
         </Slide>
         <Slide>
-          <Heading size={4} textColor="tertiary">
+          <Heading textSize={80} textColor="tertiary">
             Higher Order Component
           </Heading>
-          <Image height="700px" src="https://image.ibb.co/h3WF9d/carbon_1.png" />
         </Slide>
         <Slide>
-          <Heading size={4} textColor="tertiary">
-            Higher Order Component
-          </Heading>
-          <Image src="https://image.ibb.co/jQ4rhy/carbon_2.png" />
+          <Image margin="-100px 0 0 0" height="800px" width="5000px" src="https://image.ibb.co/h3WF9d/carbon_1.png" />
         </Slide>
         <Slide>
-          <Heading size={4} textColor="tertiary">
+          <Image margin="-100px 0 0 0" height="500px" src="https://image.ibb.co/jQ4rhy/carbon_2.png" />
+        </Slide>
+        <Slide>
+          <Heading textSize={80} textColor="tertiary">
             Render Prop
           </Heading>
+        </Slide>
+        <Slide>
           <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
-            <Image height="600px" width="600px" src="https://image.ibb.co/fPYtSo/carbon.png" />
+            <Image margin="-200px 0 0 0" height="1000px" src="https://image.ibb.co/fPYtSo/carbon.png" />
           </Link>
         </Slide>
         <Slide>
-          <Heading size={4} textColor="tertiary">
-            Render Prop
-          </Heading>
           <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
-            <Image src="https://image.ibb.co/iMDsNy/carbon_3.png" />
+          <Image margin="-100px 0 0 0" height="700px" src="https://image.ibb.co/kmwHqJ/carbon_5.png" />
           </Link>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -255,7 +249,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={4} textColor="tertiary">
+          <Heading textSize={80} textColor="tertiary">
             The hard part is creating a culture that facilitates discussion and growth
           </Heading>
         </Slide>
@@ -264,10 +258,10 @@ export default class Presentation extends React.Component {
             Documentation
           </Heading>
           <List margin="50px 0 0 100px">
-            <ListItem margin="20px 0 0 0">
+            <ListItem textSize={50} margin="20px 0 0 0">
               Do the developers know how to write documentation?
             </ListItem>
-            <ListItem margin="20px 0 0 0">
+            <ListItem textSize={50} margin="20px 0 0 0">
               Do they want to write documentation?
             </ListItem>
           </List>
@@ -276,46 +270,70 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="tertiary" caps>
             Decision-making
           </Heading>
-          <Text>Who traditionally makes decisions on your team?</Text>
+          <Text textSize={50}>
+            Who traditionally makes decisions on your team?
+          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={3} textColor="tertiary" caps>
             Styling
           </Heading>
-          <ListItem margin="20px 0 0 0">
+          <List>
+          <ListItem textSize={50} margin="20px 0 0 0">
             Should the components have styles?
           </ListItem>
-          <ListItem margin="20px 0 0 0">
-            How should styles be implemented? How easy should they be to
-            override?
+          <ListItem textSize={50} margin="20px 0 0 0">
+            How should styles be implemented? How easy should they be to override?
           </ListItem>
+          </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={3} textColor="tertiary" caps>
             Linting
           </Heading>
-          <ListItem margin="20px 0 0 0">
+        <List>
+          <ListItem textSize={50} margin="20px 0 0 0">
             What linter should you use?
           </ListItem>
-          <ListItem margin="20px 0 0 0">Should you use Prettier?</ListItem>
+          <ListItem textSize={50} margin="20px 0 0 0">
+            Should you use Prettier?
+          </ListItem>
+        </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={3} textColor="tertiary" caps>
             PR Process
           </Heading>
-          <ListItem margin="20px 0 0 0">Who can merge?</ListItem>
-          <ListItem margin="20px 0 0 0">
+        <List>
+          <ListItem textSize={50} margin="20px 0 0 0">
+            Who can merge?
+          </ListItem>
+          <ListItem textSize={50} margin="20px 0 0 0">
             What happens if the build fails?
           </ListItem>
+        </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Text size={3} textColor="tertiary">
-            A reusable component library can be valuable. But don't build it unless you're sure it's the right decision and you're ready to sink a bunch of money and time into it.
+          <Text textSize={80} textColor="tertiary">
+            Be sure!
           </Text>
         </Slide>
+      <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <List>
+        <ListItem textSize={50} margin="20px 0 0 0">
+          Work through the tradeoffs
+        </ListItem>
+        <ListItem textSize={50} margin="20px 0 0 0">
+          Learn about the techniques
+        </ListItem>
+          <ListItem textSize={50} margin="20px 0 0 0">
+            Prepare for the challenges
+        </ListItem>
+        </List>
+      </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Text margin="20px 0" textColor="secondary">
-            This slide was built with Spectacle from Formidable Labs
+            These slides were built in React with Spectacle from Formidable Labs
           </Text>
           <Text margin="20px 0" textColor="secondary">
             Special thanks to Joe Cahill for design help and Elizabeth Ferrao for running through the talk with me!
