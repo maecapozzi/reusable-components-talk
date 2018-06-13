@@ -43,7 +43,7 @@ export default class Presentation extends React.Component {
             Building a Reusable Component Library
           </Heading>
           <Text margin="10px 0 0" size={6} textColor="tertiary" fit bold>
-            Tradoffs, Techniques, and Challenges
+            Tradeoffs, Techniques, and Challenges
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
