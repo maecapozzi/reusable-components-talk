@@ -37,7 +37,12 @@ const theme = createTheme(
 
 export default class Presentation extends React.Component {
   render() {
-    return <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+    return (
+      <Deck
+        transition={["zoom", "slide"]}
+        transitionDuration={500}
+        theme={theme}
+      >
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading caps textColor="secondary">
             Building a Reusable Component Library
@@ -46,33 +51,26 @@ export default class Presentation extends React.Component {
             Tradeoffs, Techniques, and Challenges
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading textSize={50} textColor="primary" caps>
-            Who am I?
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading textSize={70} textColor="secondary">
+            The Forge
           </Heading>
-          <Heading textSize={50} textColor="secondary">
-            ...and what do I know?
-          </Heading>
-          <List margin="50px 0 0 100px">
-            <ListItem textSize={50} margin="20px 0 0 0">
-              I'm a software engineer at InRhythm (we're hiring)
-            </ListItem>
-            <ListItem textSize={50} margin="20px 0 0 0">
-              I'm consulting at a Fortune 500 company
-            </ListItem>
-            <ListItem textSize={50} margin="20px 0 0 0">
-              I'm trying to build a reusable component library at that company
-            </ListItem>
-          </List>
+          <Text textSize={50} margin="20px 0 0 0" textColor="tertiary">
+            One goal is a pattern library that can be shared between teams
+          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading textSize={80} textColor="secondary">
-            How did I end up building this reusable component library?
+            How did I get into design systems and pattern libraries?
           </Heading>
-          <Text textColor="tertiary">
-            Someone told me that we had to build a reusable component
-            library
-          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <BlockQuote>
+            <Quote textSize={100}>
+              You need to build a reusable component library
+            </Quote>
+            <Cite>My boss</Cite>
+          </BlockQuote>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
@@ -88,7 +86,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading textSize={80} textColor="secondary" caps>
-            Now, we're building a reusable component library
+            So, we started building a reusable component library.
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -155,9 +153,7 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="tertiary" caps>
             Boost Performance
           </Heading>
-          <Text textSize={70}>
-            Reduce the size of your JavaScript bundle.
-          </Text>
+          <Text textSize={70}>Reduce the size of your JavaScript bundle.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="tertiary" caps>
@@ -186,7 +182,11 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
-          <Image height="400px" width="1000px" src="https://image.ibb.co/iGyj2y/charts_3_up_bold.png" />
+          <Image
+            height="400px"
+            width="1000px"
+            src="https://image.ibb.co/iGyj2y/charts_3_up_bold.png"
+          />
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={4} textColor="tertiary" caps>
@@ -223,10 +223,19 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide>
-          <Image margin="-100px 0 0 0" height="800px" width="5000px" src="https://image.ibb.co/h3WF9d/carbon_1.png" />
+          <Image
+            margin="-100px 0 0 0"
+            height="800px"
+            width="5000px"
+            src="https://image.ibb.co/h3WF9d/carbon_1.png"
+          />
         </Slide>
         <Slide>
-          <Image margin="-100px 0 0 0" height="500px" src="https://image.ibb.co/jQ4rhy/carbon_2.png" />
+          <Image
+            margin="-100px 0 0 0"
+            height="500px"
+            src="https://image.ibb.co/jQ4rhy/carbon_2.png"
+          />
         </Slide>
         <Slide>
           <Heading textSize={80} textColor="tertiary">
@@ -235,13 +244,26 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
-            <Image margin="-200px 0 0 0" height="1000px" src="https://image.ibb.co/fPYtSo/carbon.png" />
+            <Image
+              margin="-200px 0 0 0"
+              height="1000px"
+              src="https://image.ibb.co/fPYtSo/carbon.png"
+            />
           </Link>
         </Slide>
         <Slide>
           <Link target="_blank" href="https://codesandbox.io/s/l44oo03q99">
-          <Image margin="-100px 0 0 0" height="700px" src="https://image.ibb.co/kmwHqJ/carbon_5.png" />
+            <Image
+              margin="-100px 0 0 0"
+              height="700px"
+              src="https://image.ibb.co/kmwHqJ/carbon_5.png"
+            />
           </Link>
+        </Slide>
+        <Slide>
+          <Heading textSize={80} textColor="tertiary">
+            HOOKS?
+          </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={3} textColor="primary">
@@ -250,7 +272,8 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading textSize={80} textColor="tertiary">
-            The hard part is creating a culture that facilitates discussion and growth
+            The hard part is creating a culture that facilitates discussion and
+            growth
           </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
@@ -279,80 +302,60 @@ export default class Presentation extends React.Component {
             Styling
           </Heading>
           <List>
-          <ListItem textSize={50} margin="20px 0 0 0">
-            Should the components have styles?
-          </ListItem>
-          <ListItem textSize={50} margin="20px 0 0 0">
-            How should styles be implemented? How easy should they be to override?
-          </ListItem>
+            <ListItem textSize={50} margin="20px 0 0 0">
+              Should the components have styles?
+            </ListItem>
+            <ListItem textSize={50} margin="20px 0 0 0">
+              How should styles be implemented? How easy should they be to
+              override?
+            </ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={3} textColor="tertiary" caps>
             Linting
           </Heading>
-        <List>
-          <ListItem textSize={50} margin="20px 0 0 0">
-            What linter should you use?
-          </ListItem>
-          <ListItem textSize={50} margin="20px 0 0 0">
-            Should you use Prettier?
-          </ListItem>
-        </List>
+          <List>
+            <ListItem textSize={50} margin="20px 0 0 0">
+              What linter should you use?
+            </ListItem>
+            <ListItem textSize={50} margin="20px 0 0 0">
+              Should you use Prettier?
+            </ListItem>
+          </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={3} textColor="tertiary" caps>
             PR Process
           </Heading>
-        <List>
-          <ListItem textSize={50} margin="20px 0 0 0">
-            Who can merge?
-          </ListItem>
-          <ListItem textSize={50} margin="20px 0 0 0">
-            What happens if the build fails?
-          </ListItem>
-        </List>
+          <List>
+            <ListItem textSize={50} margin="20px 0 0 0">
+              Who can merge?
+            </ListItem>
+            <ListItem textSize={50} margin="20px 0 0 0">
+              What happens if the build fails?
+            </ListItem>
+          </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Text textSize={80} textColor="tertiary">
             Be sure!
           </Text>
         </Slide>
-      <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-        <List>
-        <ListItem textSize={50} margin="20px 0 0 0">
-          Work through the tradeoffs
-        </ListItem>
-        <ListItem textSize={50} margin="20px 0 0 0">
-          Learn about the techniques
-        </ListItem>
-          <ListItem textSize={50} margin="20px 0 0 0">
-            Prepare for the challenges
-        </ListItem>
-        </List>
-      </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Text margin="20px 0" textColor="secondary">
-            These slides were built in React with Spectacle from Formidable Labs
-          </Text>
-          <Text margin="20px 0" textColor="secondary">
-            Special thanks to Joe Cahill for design help and Elizabeth Ferrao for running through the talk with me!
-          </Text>
+          <List>
+            <ListItem textSize={50} margin="20px 0 0 0">
+              Work through the tradeoffs
+            </ListItem>
+            <ListItem textSize={50} margin="20px 0 0 0">
+              Learn about the techniques
+            </ListItem>
+            <ListItem textSize={50} margin="20px 0 0 0">
+              Prepare for the challenges
+            </ListItem>
+          </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="tertiary">
-            Contact Me
-          </Heading>
-          <Text margin="20px 0" textColor="secondary">
-            maecapozzi@gmail.com
-          </Text>
-          <Text margin="20px 0" textColor="secondary">
-            @MCapoz
-          </Text>
-          <Text margin="20px 0" textColor="secondary">
-            github.com/maecapozzi
-          </Text>
-        </Slide>
-      </Deck>;
+      </Deck>
+    );
   }
 }
